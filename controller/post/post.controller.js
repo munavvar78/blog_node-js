@@ -22,4 +22,19 @@ const PostSubmit=asyncHandler(async(req,res)=>{
         })
     }
 })
-module.exports={PostSubmit}
+
+const getPost=asyncHandler(async(req,res)=>{
+    const id=req.params.id;
+    const get_post=await post.findById(id)
+    if(get_post){
+        res.status(200).json({
+            message:"Scussfully Get Data",post:get_post
+        })
+    }else{
+        res.status(400).json({
+            message:"UnScussfully Get Data"
+        })
+    }
+
+})
+module.exports={PostSubmit,getPost}

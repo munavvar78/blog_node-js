@@ -4,5 +4,6 @@ const { protect } = require("../middlewear/authMiddlewear");
 const router=expres.Router();
 
 router.route('/post').post(protect,postController.PostSubmit);
+router.route('/getPost/:id').get(protect,postController.getPost);
 
 module.exports=router
