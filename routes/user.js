@@ -1,8 +1,8 @@
 const express=require('express');
 
-const { getAlluser } = require('../controller/user.controller');
+const { getAlluser } = require('../controller/user/user.controller');
 
-const { getOneuser } = require('../controller/user.controller');
+const { getOneuser } = require('../controller/user/user.controller');
 const { protect } = require('../middlewear/authMiddlewear');
 
 const router=express.Router();

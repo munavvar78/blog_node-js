@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const ObjectId = require("mongodb").ObjectId;
-const User = require("../model/user");
+const User = require("../../model/user");
 const jwt = require("jsonwebtoken");
 const getAlluser = asyncHandler(async (req, res) => {
  
